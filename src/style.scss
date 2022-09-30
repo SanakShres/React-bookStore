@@ -1,0 +1,103 @@
+.app {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  .books_container {
+    max-width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    h1 {
+      font: {
+        size: 28px;
+        weight: 800;
+      }
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .books {
+      display: flex;
+      gap: 30px;
+      border-bottom: 0.5px solid #777;
+      width: 100%;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba(32, 109, 26, 0.682); 
+        &:hover{
+          background: rgba(32, 109, 26, 1); 
+        }
+      }
+      .book {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 335px;
+        img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+        }
+        .book_body {
+          display: flex;
+          flex-direction: column;
+          padding: 15px;
+          width: 100%;
+          height: 150px;
+          margin-bottom: 15px;
+          h2 {
+            font: {
+              size: 18px;
+              weight: 600;
+            }
+            color: #333;
+            text-transform: capitalize;
+          }
+          div {
+            p {
+              overflow: hidden;
+
+              font: {
+                size: 14px;
+                weight: 600;
+              }
+              color: #777;
+              margin: 0;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+          span {
+            text-align: right;
+            color: coral;
+          }
+        }
+        .book_action {
+          padding: 3px 15px;
+          min-width: 100px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .book_form {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      button {
+        min-width: 100px;
+      }
+    }
+  }
+}
